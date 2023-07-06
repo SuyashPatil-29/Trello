@@ -1,9 +1,13 @@
 "use client"
 import React, { useEffect } from 'react'
 import {DragDropContext, Droppable} from 'react-beautiful-dnd'
+import { useBoardStore } from '../../../store/BoardStore'
 
 const Board = () => {
-    useEffect(()=>{ })
+    const getBoard = useBoardStore((store)=> store.getBoard)
+    useEffect(()=>{ 
+        getBoard()
+    },[getBoard])
   return (
     <h1>Hello</h1>
     // <DragDropContext>
