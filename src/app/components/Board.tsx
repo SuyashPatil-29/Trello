@@ -1,8 +1,11 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import {DragDropContext, Droppable} from 'react-beautiful-dnd'
 
 const Board = () => {
+    useEffect(()=>{ })
   return (
+    <h1>Hello</h1>
     // <DragDropContext>
     //     <Droppable droppableId='board' direction='horizontal' type='column'>
     //         {(provided) => (
@@ -10,7 +13,6 @@ const Board = () => {
     //         )}
     //     </Droppable>
     // </DragDropContext>
-    <h1>Drag And Drop</h1>
   )
 }
 
