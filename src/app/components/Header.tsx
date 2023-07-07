@@ -26,7 +26,7 @@ const Header = () => {
             <Avatar name='Suyash Patil' size="50" round color='#0055D1'/>
         </div>
         </div>
-        <div className='flex items-center justify-center px-5 md:py-5'>
+        <div className='flex items-center justify-center px-5 md:py-5 my-5 md:my-0'>
             <p className='flex items-center text-sm font-light p-5 pr-5 py-2 shadow-xl rounded-xl w-fit bg-white max-w-3xl text-[#0055D1]'>
                 <UserCircleIcon className=' inline-block h-10 w-10 text-[#0055D1] mr-1'/>
                 GPT is summarizing your text...
