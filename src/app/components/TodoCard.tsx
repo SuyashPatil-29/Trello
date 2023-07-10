@@ -2,6 +2,7 @@
 import { XCircleIcon } from '@heroicons/react/24/solid';
 import React from 'react'
 import { DraggableProvidedDragHandleProps, DraggableProvidedDraggableProps } from 'react-beautiful-dnd';
+import { useBoardStore } from '../../../store/BoardStore';
 
 type Props = {
     todo: Todo;
@@ -13,10 +14,7 @@ type Props = {
 }
 
 function TodoCard({ todo, index, id, innerRef, draggableProps, dragHandleProps }: Props) {
-  const deleteTask = ()=>{
-    console.log("Task deleted");
-    
-  }
+  const [deleteTask] = useBoardStore((store)=>([store.deleteTask]))
 
   return (
       <div
@@ -27,7 +25,7 @@ function TodoCard({ todo, index, id, innerRef, draggableProps, dragHandleProps }
       >
           <div className='flex justify-between item-center p-5'>
               <p>{todo.title}</p>
-              <button onClick={() => { deleteTask() }} className='text-red-500 hover:text-red-600'>
+              <button onClick={() => { deleteTask(index, todo, id) }} className='text-red-500 hover:text-red-600'>
                   <XCircleIcon className='ml-5 h-8 w-8' />
               </button>
           </div>
