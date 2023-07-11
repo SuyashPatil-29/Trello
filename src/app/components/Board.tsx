@@ -5,7 +5,7 @@ import { useBoardStore } from '../../../store/BoardStore'
 import Column from './Column'
 
 const Board = () => {
-    const [getBoard, board, setBoardState, updateTodoInDb] = useBoardStore((store)=> [store.getBoard, store.board, store.setBoardState, store.updateTodoInDb])
+    const [getBoard, board, setBoardState, updateTodoInDb] = useBoardStore((store)=> [store.getBoard, store.board, store.setBoardState, store.updateTodoInDB])
 
     useEffect(()=>{ 
         getBoard()
